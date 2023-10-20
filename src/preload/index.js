@@ -1,20 +1,27 @@
-import { contextBridge } from 'electron'
-import { electronAPI } from '@electron-toolkit/preload'
+import path from 'path';
 
-// Custom APIs for renderer
-const api = {}
+const { contextBridge } = require('electron')
+const isDevelopment = process.env.NODE_ENV === 'development'
 
-// Use `contextBridge` APIs to expose Electron APIs to
-// renderer only if context isolation is enabled, otherwise
-// just add to the DOM global.
-if (process.contextIsolated) {
-  try {
-    contextBridge.exposeInMainWorld('electron', electronAPI)
-    contextBridge.exposeInMainWorld('api', api)
-  } catch (error) {
-    console.error(error)
+contextBridge.exposeInMainWorld('api', {
+  getRsPath() {
+    let rsPath = ''
+    if (isDevelopment) {
+      rsPath = path.join(process.cwd(), '/resources')
+    } else {
+      rsPath = path.join(process.cwd(), '/resources/app.asar.unpacked/resources')
+    }
+    if(process.platform === 'win32') {
+      rsPath = rsPath.replaceAll("\\", "/");
+    }
+    return rsPath;
   }
-} else {
-  window.electron = electronAPI
-  window.api = api
-}
+})
+
+contextBridge.exposeInMainWorld('sysInfo', {
+  platform: process.platform,
+  node: process.versions.node,
+  chrome: process.versions.chrome,
+  electron: process.versions.electron,
+  env: process.env.NODE_ENV,
+})
