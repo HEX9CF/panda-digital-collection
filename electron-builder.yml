@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: panda-model-display-system
+appId: panda.model.display.system
+productName: 岁岁廿廿的节气之旅 - 熊猫模型展示
 directories:
   buildResources: build
 files:
@@ -16,7 +16,13 @@ nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
-  createDesktopShortcut: always
+  oneClick: false
+  perMachine: true
+  allowElevation: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
 mac:
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:

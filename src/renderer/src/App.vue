@@ -33,9 +33,9 @@ export default {
         0.1,
         1000
       )
-      camera.position.x = 10
-      camera.position.y = 10
-      camera.position.z = 10
+      // camera.position.x = 10
+      // camera.position.y = 10
+      camera.position.z = 20
 
       const rsPath = window.api.getRsPath();
       // const mtlPath = rsPath + '/models/1.mtl'
@@ -60,9 +60,9 @@ export default {
       })
 
       // 灯光
-      const light = new PointLight(0xffffbb, 1)
-      light.position.set(10, 10, 10)
-      scene.add(light)
+      // const light = new PointLight(0xffffbb, 1)
+      // light.position.set(10, 10, 10)
+      // scene.add(light)
 
       // 控制器
       const controls = new OrbitControls(camera, renderer.domElement);
@@ -91,7 +91,6 @@ export default {
       dirLight.shadow.mapSize = new THREE.Vector2(1024, 1024)
       scene.add(dirLight)
 
-      //加这句
       renderer.shadowMap.enabled = true;
 
       const hemLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6)
@@ -117,7 +116,6 @@ export default {
         renderer.render(scene, camera)
         requestAnimationFrame(animate)
 
-        //添加下面代码
         if (resizeRendererToDisplaySize(renderer)) {
           const canvas = renderer.domElement
           camera.aspect = canvas.clientWidth / canvas.clientHeight
