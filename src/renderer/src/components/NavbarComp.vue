@@ -1,5 +1,5 @@
 <script setup>
-import logo from '../../../../resources/icon.png?asset'
+import logo from '../../../../resources/logo.png?asset'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import logo from '../../../../resources/icon.png?asset'
         router
     >
       <div>
-        <img :src="logo" id="logo" style="background-color: #fff"/>
+        <img :src="logo" id="logo"/>
         <span id="logoText">&nbsp;岁岁廿廿的元宇宙&nbsp;</span>
       </div>
       <el-menu-item index="/"><el-icon><HomeFilled /></el-icon>首页 Home</el-menu-item>
