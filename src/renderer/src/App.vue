@@ -14,5 +14,6 @@ import FooterComp from "./components/FooterComp.vue";
 <style scoped>
 #app {
   text-align: center;
+  color: white;
 }
 </style>

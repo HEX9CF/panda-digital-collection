@@ -13,7 +13,7 @@ const routes = [
     path: '/display',
     name: 'display',
     meta: {
-      title: '岁岁廿廿的元宇宙 - 模型展示'
+      title: '岁岁廿廿的元宇宙'
     },
     component: () => import('../views/DisplayView.vue')
   },
@@ -21,7 +21,7 @@ const routes = [
     path: '/about',
     name: 'about',
     meta: {
-      title: '岁岁廿廿的元宇宙 - 关于'
+      title: '岁岁廿廿的元宇宙'
     },
     component: () => import('../views/AboutView.vue')
   },
