@@ -18,6 +18,10 @@
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vue/reactivity": "^3.3.6",
+    "@vue/shared": "^3.3.6",
+    "element-plus": "^2.4.1",
     "three": "^0.157.0",
     "three-obj-mtl-loader": "^1.0.3",
     "three-orbitcontrols": "^2.110.3",
