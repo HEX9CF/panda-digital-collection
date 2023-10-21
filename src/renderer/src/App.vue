@@ -1,19 +1,11 @@
 <script setup>
-
+import NavbarComp from "./components/NavbarComp.vue";
 </script>
 
 <template>
   <div id="app">
-    <h1>app</h1>
-    <p>
-      <router-link to="/">home</router-link>
-      &nbsp;
-      <router-link to="/display">display</router-link>
-      &nbsp;
-      <router-link to="/about">about</router-link>
-    </p>
+    <navbar-comp></navbar-comp>
     <router-view></router-view>
-    <h1>app</h1>
   </div>
 </template>
 

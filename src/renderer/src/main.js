@@ -4,8 +4,9 @@ import App from './App.vue'
 // 导入插件
 import router from './router'
 import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
 // 创建App实例
 const app = createApp(App);
