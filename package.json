@@ -21,7 +21,8 @@
     "three": "^0.157.0",
     "three-obj-mtl-loader": "^1.0.3",
     "three-orbitcontrols": "^2.110.3",
-    "vue-3d-model": "^1.4.1"
+    "vue-3d-model": "^1.4.1",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^1.0.1",
