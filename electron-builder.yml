@@ -1,5 +1,5 @@
-appId: panda.model.display.system
-productName: 岁岁廿廿的元宇宙
+appId: panda.digital.collection
+productName: 岁岁廿廿的元宇宙 - 文创IP数字藏品
 directories:
   buildResources: build
 files:
@@ -11,7 +11,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: panda-model-display-system
+  executableName: panda-digital-collection
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

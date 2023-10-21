@@ -6,7 +6,7 @@
         <h1>{{ title }}</h1>
         <el-text class="mx-1" size="small">{{ smallTitle }}</el-text>
         <el-divider></el-divider>
-        <img src="../assets/logo.png" height="200"/>
+        <el-skeleton :rows="5" animated />
         <br/>
       </el-col>
       <el-col :span="2"></el-col>
@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-const title = "岁岁廿廿的元宇宙";
-const smallTitle = "24节气文创IP数字藏品";
+const title = "藏品商店";
+const smallTitle = "激活你的数字藏品";
 </script>
 
 

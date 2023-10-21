@@ -1,7 +1,7 @@
 {
-  "name": "panda-model-display-system",
+  "name": "panda-digital-collection",
   "version": "1.0.0",
-  "description": "panda-model-display-system",
+  "description": "panda-digital-collection",
   "main": "./out/main/index.js",
   "author": "HEX9CF",
   "scripts": {

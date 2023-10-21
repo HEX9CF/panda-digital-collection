@@ -1,15 +1,23 @@
 import { app, shell, BrowserWindow } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-import icon from '../../resources/logo.png?asset'
+import icon from '../../resources/icon.png?asset'
 
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    // 设置标题栏
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      height: 50,
+      color: '#121212',
+      symbolColor: '#ffd04b'
+    },
+    // 设置图标
+    icon: icon,
     show: false,
-    autoHideMenuBar: false,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       webSecurity: false,
@@ -34,6 +42,9 @@ function createWindow() {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
   }
+
+  // 窗口最大化
+  win.maximize()
 }
 
 // This method will be called when Electron has finished

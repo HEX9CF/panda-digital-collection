@@ -1,4 +1,4 @@
-# panda-model-display-system
+# panda-digital-collection
 
 ## Project Setup
 

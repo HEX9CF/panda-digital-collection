@@ -1,22 +1,38 @@
 <template>
   <div>
     <div id="menu">
-      <el-menu :collapse="true">
+      <el-menu
+        :collapse="true"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+      >
         <el-menu-item index="1" @click="modelDialogVisible = true">
-          <el-icon><Wallet /></el-icon>
+          <el-icon>
+            <Wallet/>
+          </el-icon>
           <template #title>数字藏品</template>
         </el-menu-item>
+<!--
         <el-menu-item index="2" @click="chatDialogVisible = true">
-          <el-icon><ChatSquare/></el-icon>
+          <el-icon>
+            <ChatSquare/>
+          </el-icon>
           <template #title>聊天</template>
         </el-menu-item>
+-->
         <el-menu-item index="3" @click="cameraReset">
-          <el-icon><VideoCamera /></el-icon>
+          <el-icon>
+            <VideoCamera/>
+          </el-icon>
           <template #title>视角复位</template>
         </el-menu-item>
-        <el-menu-item index="4">
-          <el-icon><setting/></el-icon>
-          <template #title>设置</template>
+        <el-menu-item index="4" @click="ElMessageBox.alert(
+  '旋转：按住[鼠标左键]拖动画面<br/>缩放：滚动鼠标滚轮<br/>平移：同时按住[Ctrl]和[鼠标左键]拖动画面',
+  '操作说明', { dangerouslyUseHTMLString: true, } )">
+          <el-icon>
+            <Pointer/>
+          </el-icon>
+          <template #title>操作说明</template>
         </el-menu-item>
       </el-menu>
     </div>
@@ -90,6 +106,7 @@ import yushuiObj from '../../../../resources/models/yushui.obj?url'
 import yushuiMtl from '../../../../resources/models/yushui.mtl?url'
 import lixiaObj from '../../../../resources/models/lixia.obj?url'
 import lixiaMtl from '../../../../resources/models/lixia.mtl?url'
+import {ElMessageBox} from "element-plus";
 
 const chatDialogVisible = ref(false)
 const modelDialogVisible = ref(false)
@@ -128,7 +145,7 @@ const initThree = () => {
   controls.enableDamping = true
 }
 
-const resizeRendererToDisplaySize =  (renderer) => {
+const resizeRendererToDisplaySize = (renderer) => {
   const canvas = renderer.domElement
   var width = window.innerWidth
   var height = window.innerHeight

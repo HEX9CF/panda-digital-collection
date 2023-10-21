@@ -18,10 +18,18 @@ const routes = [
     component: () => import('../views/DisplayView.vue')
   },
   {
+    path: '/shop',
+    name: 'shop',
+    meta: {
+      title: '岁岁廿廿的元宇宙 - 商店'
+    },
+    component: () => import('../views/ShopView.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     meta: {
-      title: '岁岁廿廿的元宇宙'
+      title: '岁岁廿廿的元宇宙 - 关于'
     },
     component: () => import('../views/AboutView.vue')
   },
