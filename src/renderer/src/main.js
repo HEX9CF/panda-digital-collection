@@ -29,11 +29,11 @@ router.beforeEach((to, from, next) => {
 })
 
 // 禁用右键
-// document.oncontextmenu = function () { return false; }
+document.oncontextmenu = function () { return false; }
 // 禁用选择
-// document.onselectstart = function () { return false; }
+document.onselectstart = function () { return false; }
 // 禁用F12
-// document.οnkeydοwn = function () { return false; }
+document.onkeydown = function () { return false; }
 
 // 挂载app
 app.mount('#app');

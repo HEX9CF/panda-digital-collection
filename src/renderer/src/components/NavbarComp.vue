@@ -8,6 +8,7 @@ import logo from '../../../../resources/icon.png?asset'
         :default-active="'/'"
         mode="horizontal"
         text-color="#fff"
+        background-color="#121212"
         active-text-color="#ffd04b"
         router
     >
@@ -17,7 +18,7 @@ import logo from '../../../../resources/icon.png?asset'
       </div>
       <el-menu-item index="/"><el-icon><HomeFilled /></el-icon>首页 Home</el-menu-item>
       <el-menu-item index="/display"><el-icon><View /></el-icon>元宇宙 Metaverse</el-menu-item>
-      <el-menu-item index="/shop"><el-icon><ShoppingCart /></el-icon>藏品商店 Shop</el-menu-item>
+      <el-menu-item index="/activation"><el-icon><Key /></el-icon>激活藏品 Activation</el-menu-item>
       <el-menu-item index="/about"><el-icon><InfoFilled /></el-icon>关于 About</el-menu-item>
     </el-menu>
   </el-affix>

@@ -44,7 +44,7 @@ function createWindow() {
   }
 
   // 窗口最大化
-  win.maximize()
+  mainWindow.maximize()
 }
 
 // This method will be called when Electron has finished

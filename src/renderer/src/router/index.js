@@ -18,12 +18,12 @@ const routes = [
     component: () => import('../views/DisplayView.vue')
   },
   {
-    path: '/shop',
-    name: 'shop',
+    path: '/activation',
+    name: 'activation',
     meta: {
-      title: '岁岁廿廿的元宇宙 - 商店'
+      title: '岁岁廿廿的元宇宙 - 激活藏品'
     },
-    component: () => import('../views/ShopView.vue')
+    component: () => import('../views/ActivationView.vue')
   },
   {
     path: '/about',

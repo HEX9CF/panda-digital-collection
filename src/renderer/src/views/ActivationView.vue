@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-const title = "藏品商店";
+const title = "激活藏品";
 const smallTitle = "激活你的数字藏品";
 </script>
 
