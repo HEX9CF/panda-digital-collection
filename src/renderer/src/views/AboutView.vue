@@ -15,9 +15,12 @@
               </el-col>
               <el-col :span="12">
                 <div>
-                  <p style="text-align: left">程序设计：郑智豪
+                  <p style="text-align: left">
+                    程序设计：郑智豪
                     <br/>
-                    艺术创作：祝晓成、李家红、黄凯晴
+                    模型制作：祝晓成
+                    <br/>
+                    艺术创作：祝晓成、李家红、黄凯晴、刘洋
                   </p>
                 </div>
               </el-col>
