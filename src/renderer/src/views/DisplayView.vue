@@ -27,7 +27,7 @@
           <template #title>视角复位</template>
         </el-menu-item>
         <el-menu-item index="4" @click="ElMessageBox.alert(
-  '旋转：按住[鼠标左键]拖动画面<br/>缩放：滚动鼠标滚轮<br/>平移：同时按住[Ctrl]和[鼠标左键]拖动画面',
+  '旋转：按住[鼠标左键]拖动画面<br/>缩放：滚动鼠标滚轮<br/>平移：按住[鼠标右键]拖动画面',
   '操作说明', { dangerouslyUseHTMLString: true, } )">
           <el-icon>
             <Pointer/>
