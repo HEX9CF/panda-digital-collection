@@ -126,6 +126,7 @@ const init = () => {
   handleThree.initThree(canvas);
   handleThree.loadGrid();
   handleThree.loadLight();
+  handleThree.loadSkyBox();
   // handleThree.loadFloor();
   handleThree.animate();
 }

@@ -3,6 +3,8 @@ import {OrbitControls} from "three/addons/controls/OrbitControls";
 import {MTLLoader} from "three/addons/loaders/MTLLoader";
 import {OBJLoader} from "three/addons/loaders/OBJLoader";
 
+const rsPath = window.api.getRsPath();
+
 let scene, camera, renderer, controls;
 
 export const initThree = (canvas) => {
@@ -25,7 +27,7 @@ export const initThree = (canvas) => {
   scene.background = new THREE.Color('#eee');
 
   // 雾
-  scene.fog = new THREE.Fog('#eee', 20, 100);
+  // scene.fog = new THREE.Fog('#eee', 20, 100);
 
   // 启用阴影映射
   renderer.shadowMap.enabled = true;
@@ -69,7 +71,7 @@ export const animate = () => {
 export const loadFloor = () => {
   let floorGeometry = new THREE.PlaneGeometry(8000, 8000)
   let floorMaterial = new THREE.MeshPhongMaterial({
-    color: 0x857ebb,
+    color: '#3f5126',
     shininess: 0,
   })
 
@@ -78,6 +80,18 @@ export const loadFloor = () => {
   floor.receiveShadow = true
   floor.position.y = -0.001
   scene.add(floor)
+}
+
+// 天空盒
+export const loadSkyBox = () => {
+  const loader = new THREE.TextureLoader();
+  const texture = loader.load(
+    rsPath + '/textures/skyTex1.png',
+    () => {
+      texture.mapping = THREE.EquirectangularReflectionMapping;
+      texture.colorSpace = THREE.SRGBColorSpace;
+      scene.background = texture;
+    });
 }
 
 // 光源
@@ -89,8 +103,6 @@ export const loadLight = () => {
 
 // 模型
 export const loadModel = (objPath, mtlPath) => {
-  const rsPath = window.api.getRsPath();
-
   // 加载mtl材质
   const mtlLoader = new MTLLoader()
   mtlLoader.setCrossOrigin("Anonymous");
@@ -109,7 +121,7 @@ export const loadModel = (objPath, mtlPath) => {
 
 // 网格
 export const loadGrid = () => {
-  const gridHelper = new THREE.GridHelper(10, 10)
+  const gridHelper = new THREE.GridHelper(100, 10)
   scene.add(gridHelper)
 }
 
