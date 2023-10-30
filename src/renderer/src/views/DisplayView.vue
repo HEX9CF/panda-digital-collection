@@ -126,7 +126,7 @@ const init = () => {
   handleThree.initThree(canvas);
   handleThree.loadGrid();
   handleThree.loadLight();
-  handleThree.loadSkyBox();
+  handleThree.loadSkyBox('/textures/skyTex1.png');
   // handleThree.loadFloor();
   handleThree.animate();
 }

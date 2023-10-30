@@ -83,10 +83,10 @@ export const loadFloor = () => {
 }
 
 // 天空盒
-export const loadSkyBox = () => {
+export const loadSkyBox = (skyTexPath) => {
   const loader = new THREE.TextureLoader();
   const texture = loader.load(
-    rsPath + '/textures/skyTex1.png',
+    rsPath + skyTexPath,
     () => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       texture.colorSpace = THREE.SRGBColorSpace;
@@ -97,7 +97,7 @@ export const loadSkyBox = () => {
 // 光源
 export const loadLight = () => {
   // 环境光
-  const ambientLight = new THREE.AmbientLight('#ffffff', 1);
+  const ambientLight = new THREE.AmbientLight('#ffffff', 2);
   scene.add(ambientLight);
 }
 
