@@ -18,7 +18,7 @@
           <template #title>聊天</template>
         </el-menu-item>
 -->
-        <el-menu-item index="3" @click="cameraReset">
+        <el-menu-item index="3" @click="handleThree.cameraReset">
           <el-icon><VideoCamera/></el-icon>
           <template #title>视角复位</template>
         </el-menu-item>
