@@ -7,9 +7,7 @@
         active-text-color="#ffd04b"
       >
         <el-menu-item index="1" @click="modelDialogVisible = true">
-          <el-icon>
-            <Wallet/>
-          </el-icon>
+          <el-icon><Wallet/></el-icon>
           <template #title>数字藏品</template>
         </el-menu-item>
 <!--
@@ -21,17 +19,13 @@
         </el-menu-item>
 -->
         <el-menu-item index="3" @click="cameraReset">
-          <el-icon>
-            <VideoCamera/>
-          </el-icon>
+          <el-icon><VideoCamera/></el-icon>
           <template #title>视角复位</template>
         </el-menu-item>
         <el-menu-item index="4" @click="ElMessageBox.alert(
   '旋转：按住[鼠标左键]拖动画面<br/>缩放：滚动鼠标滚轮<br/>平移：按住[鼠标右键]拖动画面',
   '操作说明', { dangerouslyUseHTMLString: true, } )">
-          <el-icon>
-            <Pointer/>
-          </el-icon>
+          <el-icon><Pointer/></el-icon>
           <template #title>操作说明</template>
         </el-menu-item>
       </el-menu>
@@ -49,23 +43,23 @@
       <el-tabs style="height: auto">
         <el-tab-pane label="春季 Spring">
           <el-space wrap>
-            <el-card class="modelCard" @click="selectModel(lichun1Obj, lichun1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.lichun1)">
               <img src="../assets/avatar/lichun1.gif" width="100" height="100"/><br/>
               <p>立春</p>
             </el-card>
-            <el-card class="modelCard" @click="selectModel(yushui1Obj, yushui1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.yushui1)">
               <img src="../assets/avatar/yushui1.gif" width="100" height="100"/><br/>
               <p>雨水</p>
             </el-card>
-            <el-card class="modelCard" @click="selectModel(jingzhe1Obj, jingzhe1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.jingzhe1)">
               <img src="../assets/avatar/jingzhe1.gif" width="100" height="100"/><br/>
               <p>惊蛰</p>
             </el-card>
-            <el-card class="modelCard" @click="selectModel(chunfen1Obj, chunfen1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.chunfen1)">
               <img src="../assets/avatar/chunfen1.gif" width="100" height="100"/><br/>
               <p>春分</p>
             </el-card>
-            <el-card class="modelCard" @click="selectModel(qingming1Obj, qingming1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.qingming1)">
               <img src="../assets/avatar/qingming1.gif" width="100" height="100"/><br/>
               <p>清明</p>
             </el-card>
@@ -73,7 +67,7 @@
         </el-tab-pane>
         <el-tab-pane label="夏季 Summer">
           <el-space wrap>
-            <el-card class="modelCard" @click="selectModel(lixia1Obj, lixia1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.lixia1)">
               <img src="../assets/avatar/lixia1.gif" width="100" height="100"/><br/>
               <p>立夏</p>
             </el-card>
@@ -81,7 +75,7 @@
         </el-tab-pane>
         <el-tab-pane label="秋季 Autumn">
           <el-space wrap>
-            <el-card class="modelCard" @click="selectModel(hanlu1Obj, hanlu1Mtl)">
+            <el-card class="modelCard" @click="selectModel(models.hanlu1)">
               <img src="../assets/avatar/hanlu1.gif" width="100" height="100"/><br/>
               <p>寒露</p>
             </el-card>
@@ -120,22 +114,7 @@ import {MTLLoader} from "three/examples/jsm/loaders/MTLLoader";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import {ElMessageBox} from "element-plus";
 
-import lichun1Obj from '../../../../resources/models/lichun1.obj?url'
-import lichun1Mtl from '../../../../resources/models/lichun1.mtl?url'
-import yushui1Obj from '../../../../resources/models/yushui1.obj?url'
-import yushui1Mtl from '../../../../resources/models/yushui1.mtl?url'
-import jingzhe1Obj from '../../../../resources/models/jingzhe1.obj?url'
-import jingzhe1Mtl from '../../../../resources/models/jingzhe1.mtl?url'
-import chunfen1Obj from '../../../../resources/models/chunfen1.obj?url'
-import chunfen1Mtl from '../../../../resources/models/chunfen1.mtl?url'
-import qingming1Obj from '../../../../resources/models/qingming1.obj?url'
-import qingming1Mtl from '../../../../resources/models/qingming1.mtl?url'
-
-import lixia1Obj from '../../../../resources/models/lixia1.obj?url'
-import lixia1Mtl from '../../../../resources/models/lixia1.mtl?url'
-
-import hanlu1Obj from '../../../../resources/models/hanlu1.obj?url'
-import hanlu1Mtl from '../../../../resources/models/hanlu1.mtl?url'
+import * as models from "../scripts/importModels"
 
 const chatDialogVisible = ref(false)
 const modelDialogVisible = ref(false)
@@ -264,10 +243,10 @@ const cameraReset = () => {
   camera.position.z = 15
 }
 
-const selectModel = (objPath, mtlPath) => {
+const selectModel = (model) => {
   modelDialogVisible.value = false;
   init();
-  loadModel(objPath, mtlPath);
+  loadModel(model.obj, model.mtl);
 }
 
 const init = () => {
@@ -279,8 +258,7 @@ const init = () => {
 }
 
 onMounted(() => {
-  init();
-  loadModel(lichun1Obj, lichun1Mtl);
+  selectModel(models.lichun1)
 });
 </script>
 
