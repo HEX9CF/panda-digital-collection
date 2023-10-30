@@ -19,7 +19,6 @@ const title = "岁岁廿廿的元宇宙";
 const smallTitle = "24节气文创IP数字藏品";
 </script>
 
-
 <style scoped>
 el-carousel {
   height: 100px;
