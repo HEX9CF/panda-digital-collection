@@ -7,41 +7,42 @@ let scene, camera, renderer, controls;
 
 export const initThree = (canvas) => {
   // 实例化对象
-  scene = new THREE.Scene()
+  scene = new THREE.Scene();
   renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     // 抗锯齿
     antialias: true
-  })
+  });
   camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
-  )
-  controls = new OrbitControls(camera, renderer.domElement)
+  );
+  controls = new OrbitControls(camera, renderer.domElement);
 
   // 背景
-  scene.background = new THREE.Color('#eee')
+  scene.background = new THREE.Color('#eee');
+
   // 雾
-  scene.fog = new THREE.Fog('#eee', 20, 100)
+  scene.fog = new THREE.Fog('#eee', 20, 100);
 
   // 启用阴影映射
-  renderer.shadowMap.enabled = true
+  renderer.shadowMap.enabled = true;
 
   // 摄像机位置
-  cameraReset()
+  cameraReset();
 
   // 控制器阻尼感
-  controls.enableDamping = true
+  controls.enableDamping = true;
 }
 
 export const resizeRendererToDisplaySize = (renderer) => {
-  const canvas = renderer.domElement
-  var width = window.innerWidth
-  var height = window.innerHeight
-  var canvasPixelWidth = canvas.width / window.devicePixelRatio
-  var canvasPixelHeight = canvas.height / window.devicePixelRatio
+  const canvas = renderer.domElement;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const canvasPixelWidth = canvas.width / window.devicePixelRatio;
+  const canvasPixelHeight = canvas.height / window.devicePixelRatio;
 
   const needResize =
     canvasPixelWidth !== width || canvasPixelHeight !== height
@@ -51,6 +52,7 @@ export const resizeRendererToDisplaySize = (renderer) => {
   return needResize
 }
 
+// 动画
 export const animate = () => {
   controls.update()
   renderer.render(scene, camera)
@@ -71,7 +73,7 @@ export const loadFloor = () => {
     shininess: 0,
   })
 
-  let floor = new THREE.Mesh(floorGeometry, floorMaterial)
+  const floor = new THREE.Mesh(floorGeometry, floorMaterial)
   floor.rotation.x = -0.5 * Math.PI
   floor.receiveShadow = true
   floor.position.y = -0.001
@@ -81,7 +83,7 @@ export const loadFloor = () => {
 // 光源
 export const loadLight = () => {
   // 环境光
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  const ambientLight = new THREE.AmbientLight('#ffffff', 1);
   scene.add(ambientLight);
 }
 
