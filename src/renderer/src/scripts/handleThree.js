@@ -80,15 +80,9 @@ export const loadFloor = () => {
 
 // 光源
 export const loadLight = () => {
-  const hemLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6)
-  hemLight.position.set(0, 20, 20)
-  scene.add(hemLight)
-
-  const dirLight = new THREE.DirectionalLight(0xffffff, 0.6)
-  dirLight.position.set(10, 8, 5)
-  dirLight.castShadow = true
-  dirLight.shadow.mapSize = new THREE.Vector2(1024, 1024)
-  scene.add(dirLight)
+  // 环境光
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  scene.add(ambientLight);
 }
 
 // 模型
