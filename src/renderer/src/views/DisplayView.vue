@@ -99,9 +99,29 @@
         </el-tab-pane>
         <el-tab-pane label="秋季 Autumn">
           <el-space wrap>
+            <el-card class="modelCard" @click="selectModel(models.liqiu1)">
+              <img src="../assets/avatar/liqiu1.gif" width="100" height="100"/><br/>
+              <p>立秋</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.chushu1)">
+              <img src="../assets/avatar/chushu1.gif" width="100" height="100"/><br/>
+              <p>处暑</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.bailu1)">
+              <img src="../assets/avatar/bailu1.gif" width="100" height="100"/><br/>
+              <p>白露</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.qiufen1)">
+              <img src="../assets/avatar/qiufen1.gif" width="100" height="100"/><br/>
+              <p>秋分</p>
+            </el-card>
             <el-card class="modelCard" @click="selectModel(models.hanlu1)">
               <img src="../assets/avatar/hanlu1.gif" width="100" height="100"/><br/>
               <p>寒露</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.shuangjiang1)">
+              <img src="../assets/avatar/shuangjiang1.gif" width="100" height="100"/><br/>
+              <p>霜降</p>
             </el-card>
           </el-space>
         </el-tab-pane>

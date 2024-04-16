@@ -27,8 +27,18 @@ import dashu1Obj from '../../../../resources/models/dashu1.obj?url'
 import dashu1Mtl from '../../../../resources/models/dashu1.mtl?url'
 
 // autumn
+import liqiu1Obj from '../../../../resources/models/liqiu1.obj?url'
+import liqiu1Mtl from '../../../../resources/models/liqiu1.mtl?url'
+import chushu1Obj from '../../../../resources/models/chushu1.obj?url'
+import chushu1Mtl from '../../../../resources/models/chushu1.mtl?url'
+import bailu1Obj from '../../../../resources/models/bailu1.obj?url'
+import bailu1Mtl from '../../../../resources/models/bailu1.mtl?url'
+import qiufen1Obj from '../../../../resources/models/qiufen1.obj?url'
+import qiufen1Mtl from '../../../../resources/models/qiufen1.mtl?url'
 import hanlu1Obj from '../../../../resources/models/hanlu1.obj?url'
 import hanlu1Mtl from '../../../../resources/models/hanlu1.mtl?url'
+import shuangjiang1Obj from '../../../../resources/models/shuangjiang1.obj?url'
+import shuangjiang1Mtl from '../../../../resources/models/shuangjiang1.mtl?url'
 
 // winter
 
@@ -57,6 +67,11 @@ export const xiaoshu1 = new model(xiaoshu1Obj, xiaoshu1Mtl);
 export const dashu1 = new model(dashu1Obj, dashu1Mtl);
 
 // autumn
+export const liqiu1 = new model(liqiu1Obj, liqiu1Mtl);
+export const chushu1 = new model(chushu1Obj, chushu1Mtl);
+export const bailu1 = new model(bailu1Obj, bailu1Mtl);
+export const qiufen1 = new model(qiufen1Obj, qiufen1Mtl);
 export const hanlu1 = new model(hanlu1Obj, hanlu1Mtl);
+export const shuangjiang1 = new model(shuangjiang1Obj, shuangjiang1Mtl);
 
 // winter
