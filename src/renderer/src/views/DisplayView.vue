@@ -63,6 +63,10 @@
               <img src="../assets/avatar/qingming1.gif" width="100" height="100"/><br/>
               <p>清明</p>
             </el-card>
+            <el-card class="modelCard" @click="selectModel(models.guyu1)">
+              <img src="../assets/avatar/guyu1.gif" width="100" height="100"/><br/>
+              <p>谷雨</p>
+            </el-card>
           </el-space>
         </el-tab-pane>
         <el-tab-pane label="夏季 Summer">
@@ -70,6 +74,14 @@
             <el-card class="modelCard" @click="selectModel(models.lixia1)">
               <img src="../assets/avatar/lixia1.gif" width="100" height="100"/><br/>
               <p>立夏</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.xiaoman1)">
+              <img src="../assets/avatar/xiaoman1.gif" width="100" height="100"/><br/>
+              <p>小满</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.mangzhong1)">
+              <img src="../assets/avatar/mangzhong1.gif" width="100" height="100"/><br/>
+              <p>芒种</p>
             </el-card>
           </el-space>
         </el-tab-pane>
