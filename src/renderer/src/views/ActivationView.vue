@@ -6,8 +6,27 @@
         <h1>{{ title }}</h1>
         <el-text class="mx-1" size="small">{{ smallTitle }}</el-text>
         <el-divider></el-divider>
-        <el-skeleton :rows="5" animated />
         <br/>
+        <el-row>
+          <el-col :span="6"></el-col>
+          <el-col :span="12">
+            <el-form label-width="auto" style="max-width: 600px">
+              <el-form-item label="激活码">
+                <el-input
+                  style="width: 480px"
+                  type="password"
+                  placeholder="请输入激活码"
+                  show-password
+                />
+              </el-form-item>
+              <el-form-item>
+                <el-button type="primary" disabled>激活 Activate</el-button>
+                <el-button>取消 Cancel</el-button>
+              </el-form-item>
+            </el-form>
+          </el-col>
+          <el-col :span="6"></el-col>
+        </el-row>
       </el-col>
       <el-col :span="2"></el-col>
     </el-row>
