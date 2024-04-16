@@ -125,7 +125,36 @@
             </el-card>
           </el-space>
         </el-tab-pane>
-        <el-tab-pane label="冬季 Winter"></el-tab-pane>
+        <el-tab-pane label="冬季 Winter">
+          <el-space wrap>
+            <el-card class="modelCard" @click="selectModel(models.lidong1)">
+              <img src="../assets/avatar/lidong1.gif" width="100" height="100"/><br/>
+              <p>立冬</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.xiaoxue1)">
+              <img src="../assets/avatar/xiaoxue1.gif" width="100" height="100"/><br/>
+              <p>小雪</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.daxue1)">
+              <img src="../assets/avatar/daxue1.gif" width="100" height="100"/><br/>
+              <p>大雪</p>
+            </el-card>
+<!--
+            <el-card class="modelCard" @click="selectModel(models.dongzhi1)">
+              <img src="../assets/avatar/dongzhi1.gif" width="100" height="100"/><br/>
+              <p>冬至</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.xiaohan1)">
+              <img src="../assets/avatar/xiaohan1.gif" width="100" height="100"/><br/>
+              <p>小寒</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.dahan1)">
+              <img src="../assets/avatar/dahan1.gif" width="100" height="100"/><br/>
+              <p>大寒</p>
+            </el-card>
+-->
+          </el-space>
+        </el-tab-pane>
       </el-tabs>
       <template #footer>
       <span class="dialog-footer">
