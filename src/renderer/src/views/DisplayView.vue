@@ -83,6 +83,18 @@
               <img src="../assets/avatar/mangzhong1.gif" width="100" height="100"/><br/>
               <p>芒种</p>
             </el-card>
+            <el-card class="modelCard" @click="selectModel(models.xiazhi1)">
+              <img src="../assets/avatar/xiazhi1.gif" width="100" height="100"/><br/>
+              <p>夏至</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.xiaoshu1)">
+              <img src="../assets/avatar/xiaoshu1.gif" width="100" height="100"/><br/>
+              <p>小暑</p>
+            </el-card>
+            <el-card class="modelCard" @click="selectModel(models.dashu1)">
+              <img src="../assets/avatar/dashu1.gif" width="100" height="100"/><br/>
+              <p>大暑</p>
+            </el-card>
           </el-space>
         </el-tab-pane>
         <el-tab-pane label="秋季 Autumn">

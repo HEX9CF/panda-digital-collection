@@ -19,6 +19,12 @@ import xiaoman1Obj from '../../../../resources/models/xiaoman1.obj?url'
 import xiaoman1Mtl from '../../../../resources/models/xiaoman1.mtl?url'
 import mangzhong1Obj from '../../../../resources/models/mangzhong1.obj?url'
 import mangzhong1Mtl from '../../../../resources/models/mangzhong1.mtl?url'
+import xiazhi1Obj from '../../../../resources/models/xiazhi1.obj?url'
+import xiazhi1Mtl from '../../../../resources/models/xiazhi1.mtl?url'
+import xiaoshu1Obj from '../../../../resources/models/xiaoshu1.obj?url'
+import xiaoshu1Mtl from '../../../../resources/models/xiaoshu1.mtl?url'
+import dashu1Obj from '../../../../resources/models/dashu1.obj?url'
+import dashu1Mtl from '../../../../resources/models/dashu1.mtl?url'
 
 // autumn
 import hanlu1Obj from '../../../../resources/models/hanlu1.obj?url'
@@ -46,6 +52,9 @@ export const guyu1 = new model(guyu1Obj, guyu1Mtl);
 export const lixia1 = new model(lixia1Obj, lixia1Mtl);
 export const xiaoman1 = new model(xiaoman1Obj, xiaoman1Mtl);
 export const mangzhong1 = new model(mangzhong1Obj, mangzhong1Mtl);
+export const xiazhi1 = new model(xiazhi1Obj, xiazhi1Mtl);
+export const xiaoshu1 = new model(xiaoshu1Obj, xiaoshu1Mtl);
+export const dashu1 = new model(dashu1Obj, dashu1Mtl);
 
 // autumn
 export const hanlu1 = new model(hanlu1Obj, hanlu1Mtl);
