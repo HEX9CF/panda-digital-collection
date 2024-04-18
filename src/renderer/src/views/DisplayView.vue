@@ -139,7 +139,6 @@
               <img src="../assets/avatar/daxue1.gif" width="100" height="100"/><br/>
               <p>大雪</p>
             </el-card>
-<!--
             <el-card class="modelCard" @click="selectModel(models.dongzhi1)">
               <img src="../assets/avatar/dongzhi1.gif" width="100" height="100"/><br/>
               <p>冬至</p>
@@ -152,7 +151,6 @@
               <img src="../assets/avatar/dahan1.gif" width="100" height="100"/><br/>
               <p>大寒</p>
             </el-card>
--->
           </el-space>
         </el-tab-pane>
       </el-tabs>
