@@ -47,12 +47,12 @@ import xiaoxue1Obj from '../../../../resources/models/xiaoxue1.obj?url'
 import xiaoxue1Mtl from '../../../../resources/models/xiaoxue1.mtl?url'
 import daxue1Obj from '../../../../resources/models/daxue1.obj?url'
 import daxue1Mtl from '../../../../resources/models/daxue1.mtl?url'
-// import dongzhi1Obj from '../../../../resources/models/dongzhi1.obj?url'
-// import dongzhi1Mtl from '../../../../resources/models/dongzhi1.mtl?url'
-// import xiaohan1Obj from '../../../../resources/models/xiaohan1.obj?url'
-// import xiaohan1Mtl from '../../../../resources/models/xiaohan1.mtl?url'
-// import dahan1Obj from '../../../../resources/models/dahan1.obj?url'
-// import dahan1Mtl from '../../../../resources/models/dahan1.mtl?url'
+import dongzhi1Obj from '../../../../resources/models/dongzhi1.obj?url'
+import dongzhi1Mtl from '../../../../resources/models/dongzhi1.mtl?url'
+import xiaohan1Obj from '../../../../resources/models/xiaohan1.obj?url'
+import xiaohan1Mtl from '../../../../resources/models/xiaohan1.mtl?url'
+import dahan1Obj from '../../../../resources/models/dahan1.obj?url'
+import dahan1Mtl from '../../../../resources/models/dahan1.mtl?url'
 
 // model class
 class model {
@@ -90,6 +90,6 @@ export const shuangjiang1 = new model(shuangjiang1Obj, shuangjiang1Mtl);
 export const lidong1 = new model(lidong1Obj, lidong1Mtl);
 export const xiaoxue1 = new model(xiaoxue1Obj, xiaoxue1Mtl);
 export const daxue1 = new model(daxue1Obj, daxue1Mtl);
-// export const dongzhi1 = new model(dongzhi1Obj, dongzhi1Mtl);
-// export const xiaohan1 = new model(xiaohan1Obj, xiaohan1Mtl);
-// export const dahan1 = new model(dahan1Obj, dahan1Mtl);
+export const dongzhi1 = new model(dongzhi1Obj, dongzhi1Mtl);
+export const xiaohan1 = new model(xiaohan1Obj, xiaohan1Mtl);
+export const dahan1 = new model(dahan1Obj, dahan1Mtl);
